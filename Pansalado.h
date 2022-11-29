@@ -1,3 +1,13 @@
+/*
+* Programa con las clases de: pan dulce, pan salado y café que:
+* Atributos: tamaño , costo ,  nombre,dulsura .
+* Metodos: getters(), setters(), crece(tiempo)
+* Constructor
+*/
+#include <iostream> 
+#include <cmath>
+#include <string>
+using namespace std;
 class Pansalado{
     private: 
         string nombre;

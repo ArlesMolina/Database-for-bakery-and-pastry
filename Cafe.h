@@ -1,48 +1,50 @@
-class Cafe{
+/*
+* Programa con las clases de: pan dulce, pan salado y café que:
+* Atributos: tamaño , costo ,  nombre,dulsura .
+* Metodos: getters(), setters(), crece(tiempo)
+* Constructor
+*/
+#include "Producto.h"
+
+#include <iostream> 
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+class Cafe: public Producto{
+    // Declaramos los atributos que tendra nuestra clase hija
     private: 
-        string nombre;
-        int costo;
-        string topping;
-        int tamanio;
+    string topping;
+    
     public:
-    //Constructores con parametros
-    Cafe (string nom, int cos, string top, int tam ){
-        nombre=nom;
-        costo=cos;
-        topping=top;
-        tamanio=tam;
+    // Definicion de los metodos
+    Cafe(){
+        topping="";
     }
-    //Getters
-    string getNombre(){
-        return nombre;
+
+    Cafe(string nom, int cos, int tam, string top): 
+    //Estos son los datos que vienen del papa
+    Producto(nom, cos, tam){
+        //Propio
+        topping = top;
     }
-    int getCosto(){
-        return costo;
-    }
+
     string getTopping(){
         return topping;
     }
-    int getTamanio(){
-        return tamanio;
-    }
-    //Setters
-    void setNombre(string nom ){
-        nombre=nom;
-    }
-    void setCosto(int cos ){
-        costo=cos;
-    }
+
     void setTopping(string top){
-        topping=top;
+        topping = top;
     }
-    void setTamanio(int tam ){
-        tamanio=tam;
-    }
-    //Metodos de la clase
+
     void imprimeDatos(){
-        cout<< "Nombre: "<<nombre<<endl;
-        cout<< "Costo: "<<costo<<endl;
-        cout<< "Topping: "<<topping<<endl;
-        cout<< "Tamanio: "<<tamanio<<endl;
+        cout<< "Nombre: "<<getNombre()<<endl;
+        cout<< "Costo: "<<getCosto()<<endl;
+        cout<< "Tamanio: "<<getTamanio()<<endl;
+        cout<< "Topping: "<<getTopping()<<endl;
     }
+
 };
+
+
