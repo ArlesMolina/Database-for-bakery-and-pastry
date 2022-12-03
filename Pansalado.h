@@ -1,58 +1,41 @@
-/*
-* Programa con las clases de: pan dulce, pan salado y café que:
-* Atributos: tamaño , costo ,  nombre,dulsura .
-* Metodos: getters(), setters(), crece(tiempo)
-* Constructor
-*/
+#ifndef PANSALADO_H
+#define PANSALADO_H
 #include <iostream> 
 #include <cmath>
 #include <string>
+#include "Producto.h"
 using namespace std;
-class Pansalado{
+class Pansalado:public Producto{
     private: 
-        string nombre;
-        int costo;
         float saladez;
-        int tamanio;
     public:
     //Constructores con parametros
-    Pansalado (string nom, int cos, float sal, int tam ){
-        nombre=nom;
-        costo=cos;
+    Pansalado(){
+        saladez=0.0;
+    }
+    Pansalado (string nom, int cos, float sal, int tam ):
+    Producto(nom,cos,tam){
         saladez=sal;
-        tamanio=tam;
     }
     //Getters
-    string getNombre(){
-        return nombre;
-    }
-    int getCosto(){
-        return costo;
-    }
+    
     float getSaladez(){
         return saladez;
     }
-    int getTamanio(){
-        return tamanio;
-    }
+   
     //Setters
-    void setNombre(string nom ){
-        nombre=nom;
-    }
-    void setCosto(int cos ){
-        costo=cos;
-    }
+    
     void setSaladez(float sal){
         saladez=sal;
     }
-    void setTamanio(int tam ){
-        tamanio=tam;
-    }
+    
     //Metodos de la clase
     void imprimeDatos(){
-        cout<< "Nombre: "<<nombre<<endl;
-        cout<< "Costo: "<<costo<<endl;
+        cout<< "Nombre: "<<getNombre()<<endl;
+        cout<< "Costo: "<<getCosto()<<endl;
+        cout<< "Tamanio: "<<getTamanio()<<endl;
         cout<< "Saladez: "<<saladez<<endl;
-        cout<< "Tamanio: "<<tamanio<<endl;
     }
 };
+
+#endif 

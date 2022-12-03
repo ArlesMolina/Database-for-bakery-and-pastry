@@ -1,3 +1,5 @@
+#ifndef PRODUCTO_H
+#define PRODUCTO_H
 #include <iostream> 
 #include <cmath>
 #include <string>
@@ -5,11 +7,14 @@ using namespace std;
 
 class Producto{
     
+
     // Declaramos los atributos que tendrá nuestra clase padre
     protected:
     string nombre;
     int costo;
     int tamanio;
+
+
 
     public:
     // Definicion de los metodos
@@ -53,3 +58,4 @@ class Producto{
         cout << "Tamanio: "<< getTamanio() << endl;
     }
 };
+#endif

@@ -1,30 +1,42 @@
-/*
-* Programa con las clases de: pan dulce, pan salado y café que:
-* Atributos: tamaño , costo ,  nombre,dulsura .
-* Metodos: getters(), setters(), crece(tiempo)
-* Constructor
-*/
 #include <iostream> 
 #include <string>
 #include <stdio.h>
 #include <bits/stdc++.h>
-
 using namespace std;
 //No se manda a llamar al producto ya que esta definida dentro de las hijas
 #include "Pandulce.h"
 #include "Pansalado.h"
 #include "Cafe.h"
+#include "Paquete.h"
 
 vector<Producto*> cafes;
-   
+vector<Producto*> panesd;
+vector<Producto*> paness;
 
 int main (){
-   Pandulce pandulce("ninio envuelto",20,5,20);
-   pandulce.imprimeDatos();
-   cout << "============================" << endl;
-   Pansalado pansalado("empanada",62,8,96);
-   pansalado. imprimeDatos();
-   cout << "============================" << endl; 
+   panesd.push_back(new Pandulce("Chcolate", 20, 96,2.1 ));
+   panesd.push_back(new Pandulce("Vainilla", 20, 96,3.01));
+   vector<Producto*>::const_iterator j;
+  
+
+   for( j = panesd.begin(); j < panesd.end(); ++j ){
+      cout << "============================" << endl; 
+      (*j) -> imprimeDatos(); // asterisco antes de la variable es el contenido, despues de la variables es el contenedor
+   };
+    cout << "============================" << endl;
+
+   paness.push_back(new Pansalado("Chcolate", 20, 96,2.1 ));
+   paness.push_back(new Pansalado("Vainilla", 20, 96,3.01));
+   vector<Producto*>::const_iterator t;
+  
+
+   for( t = paness.begin(); t < paness.end(); ++t ){
+      cout << "============================" << endl; 
+      (*t) -> imprimeDatos(); // asterisco antes de la variable es el contenido, despues de la variables es el contenedor
+      cout << "============================" << endl;
+   };
+
+
    
    cafes.push_back(new Cafe("Mocha", 20, 96, "Chispitas"));
    cafes.push_back(new Cafe("Capuccino", 20, 96, "Menta"));
@@ -38,12 +50,6 @@ int main (){
       cout << "============================" << endl;
 
    };
-
+   Paquete().printPaquete();
    
-  
-   
-  
-   
-  
-
-}
+};

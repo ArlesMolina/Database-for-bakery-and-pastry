@@ -1,31 +1,22 @@
-/*
-* Programa con las clases de: pan dulce, pan salado y café que:
-* Atributos: tamaño , costo ,  nombre,dulsura .
-* Metodos: getters(), setters(), crece(tiempo)
-* Constructor
-*/
 #include "Producto.h"
-
+#ifndef CAFE_H
+#define CAFE_H
 #include <iostream> 
 #include <cmath>
 #include <string>
-
 using namespace std;
 
 class Cafe: public Producto{
     // Declaramos los atributos que tendra nuestra clase hija
     private: 
     string topping;
-    
     public:
     // Definicion de los metodos
     Cafe(){
         topping="";
     }
-
-    Cafe(string nom, int cos, int tam, string top): 
     //Estos son los datos que vienen del papa
-    Producto(nom, cos, tam){
+    Cafe(string nom, int cos, int tam, string top):Producto(nom, cos, tam){
         //Propio
         topping = top;
     }
@@ -33,7 +24,6 @@ class Cafe: public Producto{
     string getTopping(){
         return topping;
     }
-
     void setTopping(string top){
         topping = top;
     }
@@ -47,4 +37,4 @@ class Cafe: public Producto{
 
 };
 
-
+#endif
