@@ -1,14 +1,12 @@
-# Panarles
-// Para hacer uso de este codigo es necesario desgargar todos los archivos dentro de esta carpeta, de igual manera ejecutar el siguiente terminal, antes de poder ejecutar el codigo  <g++ MainPAN.cpp -o Panaderia.exe>  //
+#Knowledge Management Database for Baking and Pastry
+// To use this code, it's necessary to download all the files in this folder. Additionally, execute the following terminal command before running the code: <g++ MainPAN.cpp -o Panaderia.exe> //
 
-//UML: https://lucid.app/lucidchart/c8fc970a-d9d6-4a43-97e4-e5be27b16d1a/edit?viewport_loc=243%2C10%2C1399%2C604%2CXks-sa-H4riH&invitationId=inv_f00a63ab-42f6-4343-ba2c-23f8ee83055d
-//
+// UML: https://lucid.app/lucidchart/c8fc970a-d9d6-4a43-97e4-e5be27b16d1a/edit?viewport_loc=243%2C10%2C1399%2C604%2CXks-sa-H4riH&invitationId=inv_f00a63ab-42f6-4343-ba2c-23f8ee83055d //
 
-PANADERIA DE ARLES. 
+ARLES BAKERY.
 
-La panadería y el café es todo un arte que a trascendido con el pasar de los años. Ambas tienen un inmenso historial de metodos de preparacion, procesos de cultivo, decoraciones, entre otras cosas. Es por esto que se han revelado infinidad de variantes y cada una muy representativa de algun lugar o persona. 
+Baking and coffee-making are arts that have transcended over the years. Both have a rich history of preparation methods, cultivation processes, decorations, and much more. As a result, countless variants have emerged, each representing a specific place or person.
 
-Debido a esto el codígo tiene la intencion de ayudar a los amantes del café y pan a llevar un registro de todos los cafes y panes que han probado, dentro de esto también se podran guradar las frecetas de los mismos. De esat forma el usuario sabra las caracteristicas y recetas completas de los cafes y panes que ha llegado a probar. 
+Because of this, the purpose of the code is to help coffee and bread enthusiasts keep track of all the coffees and breads they have tried. It also allows users to save recipes. In this way, users will have detailed information and complete recipes for the coffees and breads they have tasted.
 
-El usuairo dentro del codigo, tendra que ingresar, el nombre del alimento, tamaño, precio al que lo compro, url de la receta. y dentro de la clase que este el alimento, definir una calificacion del 1-10 de su sabor.
-
+In the code, the user will need to enter the name of the item, size, purchase price, and recipe URL. Additionally, within the item class, the user will define a flavor rating from 1-10.
